@@ -10,15 +10,9 @@
   "lang": "ru",
   "icons": [
     {
-      "src": "/icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/icon-512.png",
+      "src": "https://cdn.poehali.dev/projects/f84ff9ce-0adb-4df3-abee-c2ce8d68c1b3/files/66b55c75-0114-4900-a85c-1dbf8fc895b2.jpg",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/jpeg",
       "purpose": "any maskable"
     }
   ]
