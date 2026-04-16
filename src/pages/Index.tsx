@@ -3,8 +3,10 @@ import { Section, Chat, chats } from "@/components/messenger/types";
 import SidebarNav from "@/components/messenger/SidebarNav";
 import SectionPanel from "@/components/messenger/SectionPanel";
 import ChatArea from "@/components/messenger/ChatArea";
+import AuthScreen from "@/components/messenger/AuthScreen";
 
 export default function Index() {
+  const [authed, setAuthed] = useState(false);
   const [section, setSection] = useState<Section>("chats");
   const [activeChat, setActiveChat] = useState<Chat | null>(chats[0]);
   const [input, setInput] = useState("");
@@ -15,6 +17,10 @@ export default function Index() {
     calls: true,
   });
   const [profileEdit, setProfileEdit] = useState(false);
+
+  if (!authed) {
+    return <AuthScreen onAuth={() => setAuthed(true)} />;
+  }
 
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-background text-foreground">
